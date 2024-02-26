@@ -59,6 +59,7 @@ if (savedUsers) {
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/;
     const newUser = {
         fname: event.target.form['fname'].value,
         lname: event.target.form['lname'].value,
@@ -67,15 +68,26 @@ submitBtn.addEventListener('click', (event) => {
         isLogedIn: true
     };
 
-    users.push(newUser);
-    createUserRow(newUser);
-    updateLocalStorage();
-
-    for (let input of event.target.form) {
-        if (input.id !== 'submitBtn') {
-            input.value = '';
-        }
+    if (users.find((user) => user.email === newUser.email)) {
+        alert('Email already exists');
+        return;
     }
+
+    if (regex.test(newUser.password)) {
+
+        users.push(newUser);
+        createUserRow(newUser);
+        updateLocalStorage();
+
+        for (let input of event.target.form) {
+            if (input.id !== 'submitBtn') {
+                input.value = '';
+            }
+        }
+    } else {
+        alert("Please choose a strong password for enhanced security. Your password must meet the following criteria:\n\n1. At least one lowercase letter (a-z)\n2. At least one uppercase letter (A-Z)\n3. At least one digit (0-9)\n\nEnsure your password adheres to these guidelines to maximize the security of your account. Thank you!");
+    }
+
 });
 
 function getDataFromLocalStorage() {
