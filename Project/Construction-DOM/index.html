@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <script defer src="./Script/main.js"></script>
+    <title>Construction DOM</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="constZone">
+            <h1>Construction DOM</h1>
+            <p>Create your own HTML page with its CSS,<br>
+                Fill in data for your DIV...
+            </p>
+
+            <div class="theForm">
+                <form>
+                    <section>
+                        <label for="theElement">Element type :</label>
+                        <input type="text" id="theElement" name="theElement" required>
+                    </section>
+                    <section>
+                        <label for="theWidth">The width of the element :</label>
+                        <input type="text" id="theWidth" name="theWidth" required>
+                    </section>
+                    <section>
+                        <label for="theHeight">The height of the element :</label>
+                        <input type="text" id="theHeight" name="theHeight" required>
+                    </section>
+                    <section>
+                        <label for="theContent">The content :</label>
+                        <textarea name="theContent" id="theContent" cols="30" rows="10"></textarea>
+                    </section>
+                    <section>
+                        <label for="theColor">The color of the font :</label>
+                        <input type="text" id="theColor" name="theColor">
+                    </section>
+                    <section>
+                        <label for="theFontSize">The font size :</label>
+                        <input type="text" id="theFontSize" name="theFontSize">
+                    </section>
+                    <section>
+                        <label for="theBgColor">The background color :</label>
+                        <input type="text" id="theBgColor" name="theBgColor">
+                    </section>
+                    <input type="submit" value="Submit" id="send">
+                </form>
+            </div>
+        </div>
+        <div class="domZone">
+            <div id="theCanvas"></div>
+        </div>
+    </div>
+</body>
+
+</html>

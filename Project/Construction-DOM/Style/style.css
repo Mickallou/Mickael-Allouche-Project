@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+.domZone {
+    width: 70%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+.domZone #theCanvas {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 48px 48px 0 0;
+    box-shadow: 28px 28px 57px #a1a1a1, -28px -28px 57px #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+
+.constZone {
+    padding: 15px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.constZone h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #4481eb;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-family: 'Sixtyfour', sans-serif;
+}
+
+.theForm {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+section input,
+#theContent {
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#theContent {
+    height: 100px;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 0.7rem;
+}
+
+#send {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+
+#send:hover {
+    background-position: 100% 0;
+}
+
+#send:focus {
+    outline: none;
+}
+
+@media (max-width: 960px) {
+
+    .domZone,
+    .constZone {
+        width: 100vw;
+    }
+
+    .domZone {
+        padding: 15px 15px 0 15px;
+    }
+
+    .constZone {
+        margin-top: 20px;
+    }
+
+    .domZone #theCanvas {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 790px) {
+
+    .constZone h1 {
+        font-size: 1rem;
+    }
+
+    .constZone p {
+        font-size: 0.9rem;
+    }
+
+    section input,
+    #theContent {
+        width: 70vw;
+    }
+
+    #send {
+        width: 70vw;
+    }
+
+    .domZone #theCanvas {
+        width: 95%;
+    }
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url('../Image/bgc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-image: url('../Image/cerveau.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.card .hidden {
+    display: none;
+}
+
+.card.flipped .hidden {
+    display: block;
+}
+
+.function {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#moves-counter {
+    font-size: 8rem;
+    font-family: 'PT Serif', serif;
+    color: #6A766C;
+}
+
+#newGame {
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #6A766C;
+    font-family: 'PT Serif', serif;
+}
+
+@media (max-width: 790px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #memory-game {
+        grid-template-columns: repeat(4, 70px);
+        grid-gap: 5px;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card .hidden {
+        width: 60px;
+        height: 60px;
+    }
+}
