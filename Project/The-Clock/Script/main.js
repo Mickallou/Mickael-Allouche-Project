@@ -161,6 +161,7 @@ function startTimer() {
     }, 1000);
 
 }
+
 function resetTimer() {
     clearInterval(timerInterval);
     timerDisplay.innerText = '00:00:00';

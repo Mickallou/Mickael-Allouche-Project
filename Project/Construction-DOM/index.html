@@ -25,31 +25,38 @@
                 <form>
                     <section>
                         <label for="theElement">Element type :</label>
-                        <input type="text" id="theElement" name="theElement" required>
+                        <select id="theElement" required>
+                            <option value="div">Div</option>
+                            <option value="p">Paragraph</option>
+                            <option value="h1">Heading 1</option>
+                            <option value="h2">Heading 2</option>
+                            <option value="h3">Heading 3</option>
+                            <option value="span">Span</option>
+                        </select>
                     </section>
                     <section>
-                        <label for="theWidth">The width of the element :</label>
+                        <label for="theWidth">The width of the element (px) :</label>
                         <input type="text" id="theWidth" name="theWidth" required>
                     </section>
                     <section>
-                        <label for="theHeight">The height of the element :</label>
+                        <label for="theHeight">The height of the element (px) :</label>
                         <input type="text" id="theHeight" name="theHeight" required>
                     </section>
                     <section>
                         <label for="theContent">The content :</label>
-                        <textarea name="theContent" id="theContent" cols="30" rows="10"></textarea>
+                        <textarea name="theContent" id="theContent" cols="30" rows="10" required></textarea>
                     </section>
                     <section>
                         <label for="theColor">The color of the font :</label>
-                        <input type="text" id="theColor" name="theColor">
+                        <input type="color" id="theColor" name="theColor" required>
                     </section>
                     <section>
-                        <label for="theFontSize">The font size :</label>
-                        <input type="text" id="theFontSize" name="theFontSize">
+                        <label for="theFontSize">The font size (px) :</label>
+                        <input type="text" id="theFontSize" name="theFontSize" required>
                     </section>
                     <section>
                         <label for="theBgColor">The background color :</label>
-                        <input type="text" id="theBgColor" name="theBgColor">
+                        <input type="color" id="theBgColor" name="theBgColor" required>
                     </section>
                     <input type="submit" value="Submit" id="send">
                 </form>

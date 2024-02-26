@@ -63,8 +63,6 @@ nav ul li a:hover {
 }
 
 
-
-#timer #timerBtns,
 #chrono #chronoBtns {
     display: flex;
     justify-content: center;
@@ -73,6 +71,16 @@ nav ul li a:hover {
     margin-top: 20px;
     gap: 30px;
     flex-wrap: wrap;
+}
+
+#timer #timerBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 20px;
+    gap: 35px;
 }
 
 .btn {
@@ -93,7 +101,7 @@ nav ul li a:hover {
 }
 
 #timer #timerBtns input {
-    width: 100px;
+    width: 120px;
     height: 50px;
     font-size: 2rem;
     text-align: center;
@@ -110,15 +118,14 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 35px;
 }
 
 .theBtn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 45px;
     flex-wrap: wrap;
 }
 
@@ -153,6 +160,10 @@ nav ul li a:hover {
         font-size: 6rem;
     }
 
+    #clock #dateDisplay {
+        font-size: 2rem;
+    }
+
     #timerDisplay {
         font-size: 6rem;
     }
@@ -161,4 +172,30 @@ nav ul li a:hover {
         font-size: 1rem;
     }
 
+    .theInput {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:300px) {
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .theDisplay {
+        font-size: 4rem;
+    }
+
+    #clock #dateDisplay {
+        font-size: 1.5rem;
+    }
+
+    #timerDisplay {
+        font-size: 4rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
 }
