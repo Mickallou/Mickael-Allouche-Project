@@ -26,16 +26,16 @@ function closeCartMovie() {
 function openCartMovie(movie) {
     const cartMovie = document.getElementById('theCart');
     cartMovie.innerHTML = `
-    <span id="closeCart">X</span>
-    <h1>${movie.title}</h1>
-    <div class="cartDetails">
-    <img src="${movie.backdrop_path}" alt="${movie.title}">
-    <div class="cartInfo">
-    <p><span>Release date:</span> ${movie.release_date}</p>
-    <p><span>Genres of the movie:</span> ${movie.genres}</p>
-    <p>${movie.overview}</p>
-    </div>
-    </div>
+        <span id="closeCart">X</span>
+        <h1>${movie.title}</h1>
+        <div class="cartDetails">
+            <img src="${movie.backdrop_path}" alt="${movie.title}">
+            <div class="cartInfo">
+                <p><span>Release date:</span> ${movie.release_date}</p>
+                <p><span>Genres of the movie:</span> ${movie.genres}</p>
+                <p>${movie.overview}</p>
+            </div>
+        </div>
     `;
     cartMovie.style.display = 'block';
     const close = document.getElementById('closeCart');
