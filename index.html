@@ -198,11 +198,11 @@
                 <p>.לשאולות נוספות וליצרית קשר, אנא מלא את הטופס למטה ונחזור אליך בהקדם האפשרי <br>! תודה</p>
                 <form name="forme">
                     <label for="fullname">שם מלא</label><br>
-                    <input type="text" name="fullname"><br>
+                    <input type="text" name="fullname" required><br>
                     <label for="email">דוא"ל</label><br>
-                    <input type="email" name="email"><br>
+                    <input type="email" name="email" id="contactEmail" required><br>
                     <label for="tel">טלפון</label><br>
-                    <input type="number" name="tel"><br>
+                    <input type="number" name="tel" id="contactPhone" required><br>
                     <label for="freetext">תוכן ההודעה</label><br>
                     <textarea name="freetext" maxlength="100"></textarea><br>
                     <input type="submit" value="שליחה">
